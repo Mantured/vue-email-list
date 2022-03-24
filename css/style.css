@@ -1,0 +1,18 @@
+#app {
+	height: 100vh;
+	width: 100%;
+	background-color: blanchedalmond;
+	display: flex;
+	align-items: center;
+}
+
+div ul.emails-wrapper {
+	background-color: yellowgreen;
+	border-radius: 0.3rem;
+}
+
+div ul.emails-wrapper li {
+	list-style-type: none;
+	font-size: 2rem;
+	padding: 0.3rem;
+}
