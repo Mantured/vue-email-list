@@ -31,6 +31,7 @@ const app = new Vue({
             setTimeout(() => {
                 this.emails = tempArray;
             }, 2000)
+            /* this.emails = tempArray; */
         }
     },
     mounted() {

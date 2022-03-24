@@ -29,12 +29,11 @@
         <section class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-6">
+                    <!-- <ul class="emails-wrapper" v-if="emails.length == 10"> -->
                     <ul class="emails-wrapper">
-                        <li
-                        v-if="emails.length == 0">
-                        Nessuna mail generata
-                        </li>
+                        <li v-if="emails.length  < 10" >Nessuna email generata</li>
                         <li v-else v-for="email in emails">{{email}}</li>
+                        <!-- <li v-for="email in emails">{{email}}</li> -->
                     </ul>
                 </div>
             </div>
