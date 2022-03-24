@@ -12,29 +12,34 @@ const app = new Vue({
 
     el: '#app',
     data: {
-        emails:[],
+        emails: [],
     },
 
     methods: {
         createMail() {
-            const self = this;
+            /* const self = this; */
+            const tempArray = [];
             for (let i = 0; i < 10; i++) {
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then(function (mail) {
+                    .then(function (mail) {
                     let mailGenerated = mail.data.response;
-                    self.emails.push(mailGenerated);
+                    tempArray.push(mailGenerated);
                     console.log(mailGenerated);
                 })
             }
+            console.log(tempArray);
+            setTimeout(() => {
+                this.emails = tempArray;
+            }, 2000)
         }
     },
+    mounted() {
+        this.createMail()
+    }
     /* created() {
         setTimeout(() => {
             this.createMail()
         }, 2000)
     }, */
-    mounted() {
-        this.createMail()
-    }
 })
 
